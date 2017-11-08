@@ -14,12 +14,14 @@
     if [ -e /.os_check ]
     then
         :
-    elif [[ "$(uname -v)" =~ .*16.* ]]
+
+    elif [[ "$(uname -v)" =~ *Ubuntu* ]]
     then 
         touch /.os_check
     else
         printf "%s\n" "Ubuntu 16.04 not found, exiting..."
-        exit 
+
+        printf “%s\n” “Wiley was here” 
     fi
 
 # set file descriptors for verbose actions, catch verbose on second pass
