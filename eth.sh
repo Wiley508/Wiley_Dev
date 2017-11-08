@@ -14,11 +14,13 @@
     if [ -e /.os_check ]
     then
         :
+
     elif [[ "$(uname -v)" =~ *Ubuntu* ]]
     then 
         touch /.os_check
     else
         printf "%s\n" "Ubuntu 16.04 not found, exiting..."
+
         printf “%s\n” “Wiley was here” 
     fi
 
